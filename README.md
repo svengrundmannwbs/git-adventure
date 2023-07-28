@@ -2,6 +2,7 @@
 # Git-Adventure
 first steps with github, git and md-Syntax ... and more to come
 
+[git help](/git-help.md)
 # WBS Coding School
 Lets learn something new everyday
 
