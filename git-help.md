@@ -1,6 +1,6 @@
 
 # git HELPFILE
-### Dieser Helfer für den "git workflow" ist während der ersten Gruppenarbeit an der WBS Coding School entstanden.(WDG#012 - Hackathon1 - Gruppe3)
+### Dieser Helfer für den "git workflow" ist während der ersten Gruppenarbeit an der WBS Coding School entstanden (WDG#012 - Hackathon1 - Gruppe3).
 ---
 ##### "Warten sie nicht! Bestellen sie noch heute ihren WishApple!"
 ---
