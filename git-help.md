@@ -26,7 +26,30 @@ Es wird der "Ort des Geschehens" unterschieden:
  - :satellite:: diese Aktion findet nicht auf dem lokalen Rechner sondern online statt
  - :computer:: diese Aktion findet lokal auf dem Rechner statt
 ---
-
+```mermaid
+sequenceDiagram
+    box rgb(120, 100, 200) ONLINE
+    participant main
+    participant TeamLead
+    participant branchA(online)
+    end
+    TeamLead->>main: erstellt das repository online
+    TeamLead->>main: hinterlegt Inhalte für die Zusammenarbeit
+    TeamLead->>main: git clone *remote* ?
+    box rgb(191, 223, 255) LOKAL
+    participant DevA
+    participant branchA(offline)
+    end
+    DevA->>main:git clone *remote*
+    DevA->>branchA(offline):git checkout -b "branchA"
+    DevA->>DevA:erstellt Inhalte
+    DevA->>branchA(offline):git add . oder individuelle Dateien
+    DevA->>branchA(offline):git commit -m "Kommentar"
+    DevA->>main:git pull origin main (aktualisieren)
+    DevA->>DevA: eventuelle MergeKonfliket lösen (lokal)
+    DevA->>branchA(online):git push origin branchA (NICHT IN MAIN!)
+    DevA->>main:"pull request" zu main erstellen auf GitHub
+```
 ## 1. START
 
 :satellite: 	im Browser auf GitHub das Repository erstellen und die github-url `git-url` des erstellten Repository in die Zwischenablage kopieren (ssh)
