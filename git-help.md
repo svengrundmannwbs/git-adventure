@@ -78,9 +78,10 @@ sequenceDiagram
 
 :computer:		das GitHub repository als remote Referenz hinzufügen mit 
 
-		git remote add git-url
+		git remote add origin git-url
 		
-> die remote Referenzen kann man mit 'git remote -v' anzeigen
+> die so erstellte Remote-Referenz kann man mit 'git remote -v' anzeigen
+> anstatt "origin" kann man auch einen anderen Namen für die Referenz vergeben
 
 :computer:		die lokalen Inhalte, die in der staging area sind, in das remote repository schieben mit 
 
